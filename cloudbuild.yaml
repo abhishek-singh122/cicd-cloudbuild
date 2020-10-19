@@ -1,7 +1,7 @@
 steps:
 #First Clone from Google Cloud Source Repository  
 - name: 'gcr.io/cloud-builders/git'
-  args: ['clone','https://github.com/p/${_PROJECT}/r/${_REPO_NAME}']
+  args: ['clone','https://source.developers.google.com/p/${_PROJECT}/r/${_REPO_NAME}']
 
 #Build the image 
 - name: 'gcr.io/cloud-builders/docker'
@@ -24,7 +24,7 @@ steps:
   
 substitutions:
     #GCP Specific configuration. Please DON'T change anything
- #   _PROJECT: learn-gcp-with-mahesh
+    _PROJECT: GCP-ACE
 #    _ZONE: asia-south1-a
 #    _GKE_CLUSTER: learn-gcp-with-mahesh-gke-cluster
     
